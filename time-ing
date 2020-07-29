@@ -24,10 +24,6 @@ filename = open(sys.argv[3])
 lines = filename.readlines()
 
 
-def help():
-    print('''test
-    ''')
-
 def into():
     print('''\n\r __ __| _)                        _ _|
     |    |   ` \    -_)   ____|     |     \    _` |
@@ -51,7 +47,7 @@ def send_req():
             print(t, w+ '-'+str(nr_line)+'-'+r+'['+w+ username +r+ ']', w + '\r\t\t\t   Time:', '|', str(req.elapsed.total_seconds()), '\r\t\t\t\t\t  |' + '\t-{ '+str(req.status_code)+' }')
             nr_line += 1
             #Check timeout loop holes and get accross:
-    except ValueError:
-        help()
+    except:
+        pass
 into()
 send_req()
