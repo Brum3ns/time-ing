@@ -1,6 +1,6 @@
 #### Install time-ing:
 ```
-git clone 
+git clone https://github.com/Brum3ns/time-ing.git
 cd time-ing
 pip3 -r requirement.txt
 chmod +x time-ing
