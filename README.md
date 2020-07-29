@@ -1,4 +1,13 @@
-# time-ing
+#### Install time-ing:
+```
+git clone 
+cd time-ing
+pip3 -r requirement.txt
+chmod +x time-ing
+sudo cp time-ing /usr/bin
+```
+
+#### time-ing
 ```
 use: ./time-ing url "postdata" usernames.txt timeout
 
