@@ -42,10 +42,11 @@ def send_req():
     try:
         for line in lines:
             username = line.replace('\n', '')
+            data = post_data.replace('FUZZ', username)
             nr_line = nr_line
             UserAgent = {'User-Agent': random.choice(user_agent_random)}
             #Attacking:
-            req = requests.post(url, data=post_data, headers=UserAgent) # IF JSON DATA: headers={'Content-type':'application/json', 'Accept':'application/json'})
+            req = requests.post(url, data=data, headers=UserAgent) # IF JSON DATA: headers={'Content-type':'application/json', 'Accept':'application/json'})
             #print info:
             print(t, w+ '-'+str(nr_line)+'-'+r+'['+w+ username +r+ ']', w + '\r\t\t\t   Time:', '|', str(req.elapsed.total_seconds()), '\r\t\t\t\t\t  |' + '\t-{ '+str(req.status_code)+' }')
             nr_line += 1
